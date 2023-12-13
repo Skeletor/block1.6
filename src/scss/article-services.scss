@@ -1,0 +1,127 @@
+
+@import './fonts.scss';
+
+$titleMarginLeft: 20px;
+
+$listItemBorderWidth: 2px;
+$listItemBorderRadius: 6px;
+$listItemBorderColor: #B8FFEC;
+$listItemBackgroundColor: #fff;
+$listItemColor: #7E7E82;
+
+.article-services {
+    transition: all 1s; // не работает (почему???)
+}
+
+.article-services .title {
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    height: auto;
+}
+
+.article-services .title img {
+    margin-left: calc(-1 * $titleMarginLeft);
+}
+
+.article-services .title .title__text {
+    margin-left: $titleMarginLeft;
+    font-family: $boldFontName;
+    font-size: 1.75rem;
+}
+
+.article-services ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    overflow: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.15rem;
+    color: $listItemColor;
+}
+
+.article-services ul li {
+    border: $listItemBorderWidth solid transparent;
+    border-radius: $listItemBorderRadius;
+    padding: 10px;
+
+    width: auto;
+    white-space: nowrap;
+}
+
+.article-services ul li:hover {
+    border: $listItemBorderWidth solid $listItemBorderColor;
+    background-color: $listItemBackgroundColor;
+    cursor: pointer;
+}
+
+.article-services .info-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-services .info-section > img {
+    margin: 0 10px;
+}
+
+.article-services .info__text {
+    overflow: hidden;
+    max-height: 100px;
+}
+
+.article-services .info__text.visible {
+    max-height: fit-content;
+}
+
+.article-services .info__expand-button {
+    display: flex;
+    width: fit-content;
+}
+
+.article-services .info__expand-button p {
+    font-family: $mediumFontName;
+}
+
+.article-services .info__expand-button:hover {
+    cursor: pointer;
+}
+
+.article-services .info__expand-button img.shown {
+    transform: rotate(180deg);
+}
+
+
+@media (max-width: 768px)
+{
+    .article-services .info-section > img {
+        width: 320px;
+        height: 176px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .article-services .info-section > img {
+        width: 360px;
+        height: 208px;
+    }
+}
+
+@media (min-width: 1366px)
+{
+    .article-services ul {
+        flex-wrap: wrap;
+    }
+
+    .article-services .info-section > img {
+        width: 531px;
+        height: 307px;
+    }
+
+    .article-services .info-section {
+        flex-direction: row;
+    }
+}

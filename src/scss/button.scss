@@ -1,0 +1,13 @@
+
+.button {
+    transition: 0.5s;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+  
+.button--clickable:hover {
+    filter: drop-shadow(0 0 0.5rem red);
+}
+  

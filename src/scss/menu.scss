@@ -1,0 +1,117 @@
+
+@import './fonts.scss';
+
+
+$textColor: black;
+$backgroundColor: #fff;
+$shadowColor: #676767;
+$activeListItemColor: #7E7E82;
+$shadowOffsetX: 10px;
+$shadowOffsetY: -25px;
+$menuWidth: 320px;
+
+.menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $backgroundColor;
+    width: $menuWidth;
+
+    font-family: $mediumFontName;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $shadowOffsetX $shadowOffsetY 25px -5px $shadowColor;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    z-index: 10;
+
+    transition: 0.5s ease-out;
+}
+
+.menu__list {
+    list-style: none;
+    color: $textColor;
+    padding: 0;
+    margin: 15px;
+}
+
+.menu__header {
+    display: flex;
+}
+
+.menu__header .header__item {
+    padding: 20px;
+}
+
+.menu__header .header__item:last-child {
+    margin-left: auto;
+}
+
+.menu__list .list__item {
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.menu__list .list__item-active {
+    color: $activeListItemColor;
+    margin-left: -5px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.menu__list .list__item-active > img {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: -10px;
+}
+
+.menu__footer .footer__phone-number {
+    font-family: $boldFontName;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.menu__footer .footer__mail {
+    padding-left: 15px;
+}
+
+.menu__footer .footer__lang-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+}
+
+.menu__footer .lang-list__item {
+    font-size: 16px;
+    padding-right: 15px;
+}
+
+.menu__footer .lang-list__item-active {
+    color: #7E7E82;
+}
+
+.menu__footer .image-button {
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.menu.hidden {
+    transform: translateX(calc(-1 * ($menuWidth + $shadowOffsetX)));
+}
+
+@media (min-width: 1365.98px)
+{
+    .menu {
+        box-shadow: none;
+    }
+
+    .menu .menu__header img:first-child {
+        display: none;
+    }
+}

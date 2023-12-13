@@ -1,0 +1,20 @@
+
+$regularFontName: "Regular";
+@font-face {
+    font-family: $regularFontName;
+    src: url("../fonts/TTLakes-Regular.woff") format("woff");
+}
+
+
+$mediumFontName: "Medium";
+@font-face {
+    font-family: $mediumFontName;
+    src: url("../fonts/TTLakes-Medium.woff") format("woff");
+}
+
+
+$boldFontName: "Bold";
+@font-face {
+    font-family: $boldFontName;
+    src: url("../fonts/TTLakes-Bold.woff") format("woff");
+}

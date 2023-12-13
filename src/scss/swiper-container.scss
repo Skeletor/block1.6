@@ -1,0 +1,36 @@
+
+
+.swiper-container {
+    margin-top: 15px;
+    padding-left: 0px;
+    height: fit-content;
+    box-sizing: border-box;
+    max-height: 166px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.swiper-slide {
+    width: auto;
+    padding-bottom: 16px;
+    padding-left: 10px;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px)
+{
+    .swiper-wrapper {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,40 @@
+
+@import './header.scss';
+
+$borderColor: #D9FFF5;
+$signColor: #FF3E79;
+$footerInfoColor: #7E7E82;
+
+.page-footer {
+    padding: 30px;
+}
+
+.page-footer a {
+    font-family: $mediumFontName;
+    cursor: pointer;
+}
+
+.page-footer .info a {
+    font-family: $regularFontName;
+    cursor: pointer;
+}
+
+.page-footer a span {
+    color: $signColor;
+}
+
+.page-footer .info {
+    margin-top: 30px;
+    border-top: 1px solid $borderColor;
+    color: $footerInfoColor;
+}
+
+@media (min-width: 768px)
+{
+    .page-footer .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}

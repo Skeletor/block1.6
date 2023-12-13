@@ -1,0 +1,28 @@
+
+@import './section-header.scss';
+@import './swiper-container.scss';
+@import './fonts.scss';
+
+
+.article-brands .section-header {
+    font-family: $regularFontName;
+}
+
+.article-brands .swiper-container.visible {
+    max-height: fit-content;
+}
+
+.article-brands .expand-button {
+    display: flex;
+    width: fit-content;
+    margin-left: 5px;
+    font-family: $mediumFontName;
+}
+
+.article-brands .expand-button img.shown {
+    transform: rotate(180deg);
+}
+
+.article-brands .expand-button:hover {
+    cursor: pointer;
+}

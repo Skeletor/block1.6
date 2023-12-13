@@ -1,0 +1,35 @@
+
+@import './menu.scss';
+@import './header.scss';
+@import './article-services.scss';
+@import './article-brands.scss';
+@import './article-tech.scss';
+@import './article-prices.scss';
+@import './page-footer.scss';
+@import './button.scss';
+@import './modal-call.scss';
+@import './modal-chat.scss';
+@import './opacity-filter.scss';
+
+$backgroundColor: #F8F8F8;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $backgroundColor;
+  font-family: $regularFontName;
+  overflow-x: hidden;
+}
+
+body article {
+  padding: 20px;
+  margin: 0;
+}
+
+
+@media (min-width: 1366px)
+{
+  body {
+    margin-left: $menuWidth;
+  }
+}

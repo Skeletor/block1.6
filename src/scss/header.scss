@@ -1,0 +1,77 @@
+
+@import './fonts.scss';
+
+$backgroundColor: #fff;
+$headerBorderColor: #D9FFF5;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 88px;
+
+    border-bottom: 1px solid $headerBorderColor;
+    background-color: $backgroundColor;
+    font-family: $mediumFontName;
+}
+
+.header .align--right {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.header__item {
+    display: flex;
+}
+
+.header.header--medium img {
+    margin-left: 20px;
+}
+
+.header.header--large .header__item {
+    margin-right: 25px;
+    align-items: center;
+}
+
+.header.header--large .header__item .button-text {
+    margin-right: 25px;
+}
+
+.header img.hidden {
+    display: none;
+}
+
+@media (max-width: 768px)
+{
+    .header.header--medium,
+    .header.header--large {
+        display: none;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .header.header--mobile,
+    .header.header--large {
+        display: none;
+    }
+
+    .header.header--medium {
+        display: flex;
+    }
+}
+
+@media (min-width: 1366px)
+{
+    .header.header--mobile,
+    .header.header--medium {
+        display: none;
+    }
+
+    .header.header--large {
+        display: flex;
+        margin-left: auto;
+        background-color: inherit;
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,92 @@
+
+@import './fonts.scss';
+
+$modalPadding: 15px;
+$modalBackgroundColor: #fff;
+$modalInputBorderColor: #eeeeee;
+$modalLinkColor: #FF3E79;
+
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 320px;
+    
+    background-color: $modalBackgroundColor;
+    box-shadow: 0 0 25px black;
+    opacity: 1.0 !important;
+
+    z-index: 10;
+
+    transition: 0.5s ease-out;
+}
+
+.modal .modal__header {
+    display: flex;
+    font-family: $boldFontName;
+    color: black;
+}
+
+.modal .modal__header img {
+    margin: 0;
+    padding: 0;
+}
+
+.modal img.button {
+    display: block;
+    padding: $modalPadding;
+    padding-top: calc($modalPadding + 5px);
+}
+
+.modal input {
+    font-family: $mediumFontName;
+    margin: $modalPadding;
+    margin-bottom: calc($modalPadding - 10px);
+    padding-left: calc($modalPadding - 5px);
+    height: 35px;
+    border-radius: 6px;
+    border-color: $modalInputBorderColor;
+    border: 2px solid $modalInputBorderColor;
+}
+
+.modal p:last-of-type {
+    margin: $modalPadding;
+}
+
+.modal p a {
+    color: $modalLinkColor;
+    cursor: pointer;
+}
+
+
+.modal img:last-child.button {
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.modal.hidden {
+    transform: translateX(500px);
+    z-index: -1;
+}
+
+@media (min-width: 768px)
+{
+    .modal {
+        width: 320px;
+    }
+}
+
+@media (min-width: 1366px)
+{
+    .modal img:first-of-type.button {
+        position: relative;
+        top: calc($modalPadding + 45px);
+        left: -75px;
+    }    
+}
